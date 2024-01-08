@@ -168,6 +168,7 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        Barryvdh\Debugbar\ServiceProvider::class, //add debug bar when you don't use laravel with auto-discovery
     ])->toArray(),
 
     /*
@@ -184,5 +185,7 @@ return [
     'aliases' => Facade::defaultAliases()->merge([
         // 'Example' => App\Facades\Example::class,
     ])->toArray(),
+
+    'Debugbar' => Barryvdh\Debugbar\Facades\Debugbar::class, //allows me to use facades to log messages
 
 ];
