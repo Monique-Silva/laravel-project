@@ -10,7 +10,7 @@ class MeowController extends Controller
         return 'Meoooooooooowww meow meooooow meow';
     }
 
-    public function showMessageById() {
+    public function showMessageById(string $id) {
         return "I'm number One";
     }
 
