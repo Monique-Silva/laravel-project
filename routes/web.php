@@ -15,9 +15,8 @@ use App\Http\Controllers\MeowController;
 |
 */
 
-Route::get('/', HomeController::class, 'welcome');
+Route::get('/', [HomeController::class, 'welcome']);
 
-Route::get('/meows', MeowController::class, 'showAllMessages');
+Route::get('/meows', [MeowController::class, 'showAllMessages']);
 
-Route::get('/meow/{id}', MeowController::class, 'showMessagesById');
-?>
+Route::get('/meow/{id}', [MeowController::class, 'showMessageById']);

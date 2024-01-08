@@ -6,10 +6,8 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    public function welcome() {
-        return 'Welcome to our catsite';
+    public function welcome()
+    {
+        return view('homepage');
     }
-
-    }
-
-?>
+}
