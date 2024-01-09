@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Controller;
+use App\Models\Message;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\View;
 
 class MeowController extends Controller
 {
@@ -16,4 +18,12 @@ class MeowController extends Controller
     {
         return view('meows-details');
     }
+/*
+    public function store(Request $request): RedirectResponse {
+        $message->message = $request->message;
+        $message->save();
+        return redirect('/meows');
+    }
+    */
+
 }
