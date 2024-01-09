@@ -14,7 +14,7 @@ foreach (Message::all() as $message) {
 }
 
 $comment = Comment::find(1);
-return $comment->message->title;
+return $comment->message->comments;
 
 class Message extends Model
 {

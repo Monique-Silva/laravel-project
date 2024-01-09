@@ -2,11 +2,9 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Message;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
 
-use function Laravel\Prompts\text;
 
 class MessageSeeder extends Seeder
 {
@@ -15,9 +13,9 @@ class MessageSeeder extends Seeder
      */
     public function run(): void
     {
-        DB::table('messages')->insert([
-            'message' => 'puuuuurrr pur pur meow',
-            'message' => text(100),
-        ]);
+        Message::factory()
+            ->count(100)
+            ->hasComments(1)
+            ->create();
     }
 }

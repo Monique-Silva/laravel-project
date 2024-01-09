@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
+use App\Models\Comment;
 
 
 class CommentSeeder extends Seeder
@@ -14,9 +15,8 @@ class CommentSeeder extends Seeder
      */
     public function run(): void
     {
-        DB::table('comments')->insert([
-            'comment' => 'meow é isso mesmo!',
-            //'comment' => comment(100),
-        ]);
+        Comment::factory()
+            ->count(100)
+            ->create();
     }
 }
