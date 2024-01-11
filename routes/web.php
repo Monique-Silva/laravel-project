@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\MeowController;
+use App\Http\Controllers\MessageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +17,6 @@ use App\Http\Controllers\MeowController;
 
 Route::get('/', [HomeController::class, 'welcome']);
 
-Route::get('/meows', [MeowController::class, 'showAllMessages']);
+Route::get('/messages', [MessageController::class, 'showAllMessages']);
 
-Route::get('/meow/{id}', [MeowController::class, 'showMessageById']);
+Route::get('/message/{id}', [MessageController::class, 'showMessageById']);

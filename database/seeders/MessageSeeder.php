@@ -16,6 +16,7 @@ class MessageSeeder extends Seeder
         Message::factory()
             ->count(100)
             ->hasComments(1)
+            ->hasUsers(1)
             ->create();
     }
 }

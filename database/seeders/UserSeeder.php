@@ -2,31 +2,19 @@
 
 namespace Database\Seeders;
 
-
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Message;
+use App\Models\User;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Str;
 
 class UserSeeder extends Seeder
 {
     public function run(): void
     {
         User::factory()
-            ->count(100)
-            ->hasMessages(1)
+            ->has(Message::factory(50)->hasComments(3))
             ->create();
-    }
-    /**
-     * Run the id	char(36)
-name	text
-email	varchar(255)
-email_verified_at	timestamp NULL
-password	varchar(255)
-remember_token	varchar(100) NULL
-created_at	timestamp NULL
-updated_atdatabase seeds.
-     */
-    public function run(): void
-    {
-        //
     }
 }

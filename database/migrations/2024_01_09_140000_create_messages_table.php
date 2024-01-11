@@ -11,14 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        if (!Schema::hasTable('messages')) {
-            Schema::create('messages', function (Blueprint $table) {
-                $table->id('id');
-                $table->text('message', 300);
-                $table->timestamps();
-                $table->foreignId('user_id')->constrained('users');
-            });
-        }
+        Schema::create('messages', function (Blueprint $table) {
+            $table->uuid('id')->primary();
+            $table->text('message', 300);
+            $table->timestamps();
+            $table->foreignId('user_id')->constrained('users');
+        });
     }
     /**
      * Reverse the migrations.

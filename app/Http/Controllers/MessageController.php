@@ -7,22 +7,22 @@ use App\Models\Message;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 
-class MeowController extends Controller
+class MessageController extends Controller
 {
     public function showAllMessages()
     {
-        return view('meows-list');
+        return view('messages-list');
     }
 
     public function showMessageById(string $id)
     {
-        return view('meows-details');
+        return view('messages-details');
     }
 /*
     public function store(Request $request): RedirectResponse {
         $message->message = $request->message;
         $message->save();
-        return redirect('/meows');
+        return redirect('/messages');
     }
     */
 
