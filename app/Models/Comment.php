@@ -8,11 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use App\Models\Message;
 
+
+//vai criar as relações entre os modelos (oneToMany etc) e dar instruções específicas à leitura (direito de deletar, mudar etc))
 class Comment extends Model
 {
     use HasFactory, HasUuids;
 
-    protected $fillable = [
+    protected $fillable = [ //diz o que tem direito de ser mudado
         'comments',
         'message_id',
     ];

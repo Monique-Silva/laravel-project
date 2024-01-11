@@ -14,8 +14,8 @@ class MessageSeeder extends Seeder
     public function run(): void
     {
         Message::factory()
-            ->count(100)
-            ->hasComments(1)
+            ->count(10)
+            ->hasComments(3)
             ->hasUsers(1)
             ->create();
     }
